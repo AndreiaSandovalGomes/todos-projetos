@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <section class="menu">
+      <select class="drop" id="dropMenu"></select>
+  </section>
+
+  <input />
+  <button>dsadsadsadasdsadsadsa</button>>
+
+  <div id="show">
+    <!-- <p>&#x1F600</p> -->
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      $('button').on('click', () => {
+
+        var a = $("input").val();
+        console.log(a);
+        $.get('/toner', { data: a})
+          .done( res => {
+            console.log(res);
+            res.forEach(function(tom){
+              $("#show").append(tom.tone_name));
+
+        //     /)r each(let tom in res){
+        //         $(
+        //         }"#show").appendtom);
+        // }*/
+      })
+    })
+  })
+})
+</script>
+
+</body>
+</html>

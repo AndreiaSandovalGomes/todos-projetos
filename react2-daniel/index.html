@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React: Getting Started</title>
+    <!-- importamos alguns estilos -->
+    <!-- TODO: link base.css -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+
+  </head>
+  <body>
+  <div id="container">
+
+  </div>
+
+  <script type="text/babel">
+
+
+    class MyHello extends React.Component {
+
+      constructor(props) {
+        super(props);
+        this.setOther = this.setOther.bind(this);
+        this.state = {};
+      }
+
+      setOther(){
+        this.setState({otherName: "Michael"});
+      }
+
+      render() {
+
+        return (
+          <div>
+            <h1>Hello {this.props.name}</h1>
+            {this.props.children}
+            <button onClick={this.setOther}>Click ME</button>
+            {this.state.otherName &&
+              <h2>{this.state.otherName}</h2>
+            }
+          </div>
+        )
+      }
+    }
+
+    const comp = (
+      <MyHello name='John'>
+        <h4>Vai!!!</h4>
+      </MyHello>
+    )
+
+    ReactDOM.render(
+      comp,
+      document.getElementById('container')
+    );
+
+  </script>
+
+  </body>
+</html>

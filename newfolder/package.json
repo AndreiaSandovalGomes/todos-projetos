@@ -1,0 +1,16 @@
+{
+  "name": "newfolder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sequelize": "^4.41.0",
+    "sequelize-cli": "^5.2.0",
+    "sqlite3": "^4.0.3"
+  }
+}

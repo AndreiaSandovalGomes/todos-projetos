@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="scripts/semantic-ui-css/semantic.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://file.myfontastic.com/JBgmcmo6gmg8t5u5oJSqdC/icons.css" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+<div class="logo">
+  <img src='images.jpeg'></img>
+</div>
+  <header>
+    <div class="ui container">
+      <div class="ui four item inverted orange menu">
+        <a class="item" href="/">
+          Página Inicial
+        </a>
+        <a class="item" href="/products">
+          Produtos
+        </a>
+        <a class="item" href="/list">
+          Sua Lista
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <script id="error-template" type="text/x-handlebars-template">
+  <div class="ui {{color}} inverted segment" style="height:250px;">
+    <br>
+    <h2 class="ui center aligned icon header">
+      <i class="exclamation triangle icon"></i>
+      <div class="content">
+        {{title}}
+        <div class="sub header">{{message}}</div>
+      </div>
+    </h2>
+  </div>
+</script>
+<script id="page-template" type="text/x-handlebars-template">
+  <h1 class="ui header">Pagina Inicial</h1>
+</script>
+<script id="products-template" type="text/x-handlebars-template">
+  <h1 class="ui header">Produtos</h1>
+</script>
+<script id="list-template" type="text/x-handlebars-template">
+  <h1 class="ui header">Minha lista</h1>
+</script>
+<div class="formulario">
+  <div>
+    <h1>Pesquisa de carros</h1>
+  </div>
+  <div class="div-campos">
+    <form class="campos-form">
+      <input id="campo-busca" class="campo-busca" type="text" name="noticia" placeholder="Digite aqui o termo para buscar">
+      <input id="btn-busca" class="btn-busca" type="submit" name="" value="enviar">
+    </form>
+  </div>
+</div>
+  <main>
+  <div id="search"></div>
+
+  </main>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="scripts/jquery/dist/jquery.min.js"></script>
+  <script src="scripts/semantic-ui-css/semantic.min.js"></script>
+  <script src="scripts/axios/dist/axios.min.js"></script>
+  <script src="scripts/handlebars/dist/handlebars.min.js"></script>
+  <script src="scripts/vanilla-router/dist/vanilla-router.min.js"></script>
+  <script src="scripts/handlebars/dist/handlebars.min.js"></script>
+  <script src="scripts/vanilla-router/dist/vanilla-router.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
